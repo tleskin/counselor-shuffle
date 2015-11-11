@@ -1,8 +1,7 @@
-OpenHMI
-=======
+## Counselor Shuffle
 
-Open HMI
+This app was created for the counselors at Westminster High School to allow the
+secretary to know when a counselor is available to see another student.
 
-to run this project place all the files in the same directory and then run
-<code>node app.js</code>
-and visit http://localhost:8080 with your webkit enabled web browser.
+The app utilizes Node.js and Websockets. To run the project, run
+<code>node app.js</code> and visit http://localhost:8080 in the browser.

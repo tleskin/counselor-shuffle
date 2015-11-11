@@ -2,15 +2,18 @@ var app = require('express')()
   , server = require('http').createServer(app)
   , io = require('socket.io').listen(server);
 
-server.listen(8080);
+
+var port = process.env.PORT || 8080;
+server.listen(port);
+console.log('Listening on port ' + port + '.');
 
 // routing
 app.get('/', function (req, res) {
-  res.sendfile(__dirname + '/index.html');  
+  res.sendfile(__dirname + '/index.html');
 });
 
 app.get('/app.css', function (req, res) {
-  res.sendfile(__dirname + '/app.css');  
+  res.sendfile(__dirname + '/app.css');
 });
 
 // usernames which are currently connected to the chat
